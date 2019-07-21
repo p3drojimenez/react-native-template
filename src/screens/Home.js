@@ -5,11 +5,15 @@ import {
     StyleSheet
 } from "react-native";
 
+import Message from '../components/HomeScreen/message'
+
 class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Home</Text>
+                <Message>
+                    <Text>Home Screen</Text>
+                </Message>
             </View>
         );
     }
