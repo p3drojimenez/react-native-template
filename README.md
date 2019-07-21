@@ -3,7 +3,7 @@
 [x] - React Native: 0.60.4
 [x] - React Navigation: 3.11.1
 [x] - React Redux: 7.1.0 & redux: 4.0.4
-[] - React Persins
+[x] - React Persins: 5.10.0
 [] - React Saga
 
 ## React Native
@@ -35,3 +35,8 @@ The banch redux has all necesaries files to run redux.
 
     - reducers/homeReducer: Home screen reducer
     - store/appStore: Main store. import here all the reducers.
+
+## Persist
+
+This branch added data persist with redux.
+
