@@ -1,5 +1,5 @@
-import { createStore, combineReducers } from "redux";
-
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import logger from "redux-logger";
 // Reducers
 
 import HomeReducer from "../reducers/homeReducer";
@@ -8,7 +8,8 @@ import HomeReducer from "../reducers/homeReducer";
 let store = createStore(
   combineReducers({
     home: HomeReducer
-  })
+  }),
+  applyMiddleware(logger)
 );
 
 export default store;
