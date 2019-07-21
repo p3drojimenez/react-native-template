@@ -4,7 +4,7 @@
 [x] - React Navigation: 3.11.1
 [x] - React Redux: 7.1.0 & redux: 4.0.4
 [x] - React Persins: 5.10.0
-[] - React Saga
+[x] - React Saga: 1.0.5
 
 ## React Native
 
