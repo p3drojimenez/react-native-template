@@ -5,10 +5,10 @@ import { createStackNavigator,
 
 // Views //
 
-import Home from './screens/Home';
+import Home from "./screens/Home";
 
 const AppStackNavigation = createStackNavigator({
-    Home: Home
-})
+  Home: Home
+});
 
 export default createAppContainer(AppStackNavigation);
