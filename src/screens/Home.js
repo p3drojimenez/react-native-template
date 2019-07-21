@@ -5,10 +5,18 @@ import Message from "../components/HomeScreen/message";
 import CustomButton from "../components/HomeScreen/SumButton";
 import { connect } from "react-redux";
 
+import onIncreaseCount from "../actions/increaseCount";
+import onDecreaseCount from "../actions/decreaseCount";
+
 function mapStateToProps(state) {
   return {
-    count: state.home.count,
+    count: state.home.count
   };
+}
+
+const mapDispatchToProps = {
+  onIncreaseCount,
+  onDecreaseCount
 }
 
 class Home extends Component {
@@ -21,18 +29,21 @@ class Home extends Component {
         <View style={{ flexDirection: "row" }}>
           <CustomButton
             title="Sumar"
-            onPress={() => this.props.dispatch({ type: "INCREMENT" })}
+            onPress={() => this.props.onIncreaseCount()}
           />
           <CustomButton
             title="Restar"
-            onPress={() => this.props.dispatch({ type: "DECREMENT" })}
+            onPress={() => this.props.onDecreaseCount()}
           />
         </View>
       </View>
     );
   }
 }
-export default connect(mapStateToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
 
 const styles = StyleSheet.create({
   container: {
