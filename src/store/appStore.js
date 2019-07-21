@@ -5,7 +5,7 @@ import { persistStore, persistReducer } from "redux-persist";
 
 import storage from "redux-persist/lib/storage";
 
-import { helloSaga } from "../sagas";
+import rootSaga from "../actions/sagas";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -27,7 +27,7 @@ let store = createStore(
   persistedReducer,
   applyMiddleware(logger, sagaMiddleware)
 );
-sagaMiddleware.run(helloSaga);
+sagaMiddleware.run(rootSaga);
 
 let persistor = persistStore(store);
 

@@ -1,4 +1,4 @@
-export const type = "INCREMENT";
+export const type = "INCREMENT_ASYNC";
 
 function increase() {
   return {
